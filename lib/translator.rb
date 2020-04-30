@@ -4,6 +4,10 @@ library = "./lib/emoticons.yml"
 
 def load_library(file_path)
   emoticons = YAML.load_file(file_path)
+  emoticons.each_pair do |key, values|
+    emoticons[key] = {:english => values.first, :japanese => values.last}
+  end
+  emoticons  
 end
 
 def get_japanese_emoticon(file, emoticon)
