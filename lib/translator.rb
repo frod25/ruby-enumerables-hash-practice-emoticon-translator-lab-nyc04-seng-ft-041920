@@ -2,6 +2,8 @@ require 'yaml'
 require 'pry'
 
 library = "./lib/emoticons.yml"
+test_jap_moji = "☜(⌒▽⌒)☞"
+test_eng_moji = "O:)"
 
 def load_library(file_path)
   emoticons = YAML.load_file(file_path)
