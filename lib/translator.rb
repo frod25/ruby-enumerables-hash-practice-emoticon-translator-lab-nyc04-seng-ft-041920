@@ -23,7 +23,7 @@ def get_japanese_emoticon(file, emoticon)
       end
     end
   end
-  japanese_emoticon == nil ? return not_found : japanese_emoticon
+  japanese_emoticon == nil ? return not_found : return japanese_emoticon
 end
 
 def get_english_meaning(file, emoticon)
@@ -38,9 +38,9 @@ def get_english_meaning(file, emoticon)
     end
   end
   if english_meaning == nil
-    return not_found
+    not_found
   else
-    return english_meaning
+    english_meaning
   end
 end
 
