@@ -38,9 +38,9 @@ def get_english_meaning(file, emoticon)
     end
   end
   if english_meaning == nil
-    puts not_found
+    return not_found
   else
-    english_meaning
+    return english_meaning
   end
 end
 
