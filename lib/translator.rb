@@ -11,7 +11,7 @@ end
 def get_japanese_emoticon(file, emoticon)
   master_list = load_library(file)
   japanese_emoticon = nil
-  sorry = "Sorry, that emoticon was not found"
+  not_found = "Sorry, that emoticon was not found"
   master_list.each_pair do |key, values|
     values.each_pair do |k, v|
       if master_list[key][k] == emoticon
@@ -20,7 +20,7 @@ def get_japanese_emoticon(file, emoticon)
     end
   end
   if japanese_emoticon == nil
-    return sorry
+    return not_found
   else
     return japanese_emoticon
   end
