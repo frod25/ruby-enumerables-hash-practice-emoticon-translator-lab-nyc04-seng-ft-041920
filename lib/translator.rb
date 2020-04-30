@@ -18,7 +18,9 @@ def get_japanese_emoticon(file, emoticon)
   japanese_emoticon = nil
   master_list.each_pair do |key, values|
     values.each_pair do |k, v|
-      binding.pry
+      if master_list[key][k] == emoticon
+        japanese_emoticon = values[:japanese]
+      end
     end
   end
   japanese_emoticon
@@ -28,8 +30,11 @@ def get_english_meaning(file, emoticon)
   master_list = load_library(file)
   english_meaning = nil
   master_list.each_pair do |key, values|
-    if values.include?(emoticon)
-      english_meaning = key
+    values.each_pair do |k, v|
+      binding.pry
+      if master_list[key][k] == emoticon
+        
+      end
     end
   end
   english_meaning
