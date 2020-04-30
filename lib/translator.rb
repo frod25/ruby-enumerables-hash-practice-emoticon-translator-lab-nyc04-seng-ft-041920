@@ -1,9 +1,4 @@
 require 'yaml'
-#require 'pry'
-
-library = "./lib/emoticons.yml"
-test_jap_moji = "☜(⌒▽⌒)☞"
-test_eng_moji = "O:)"
 
 def load_library(file_path)
   emoticons = YAML.load_file(file_path)
@@ -28,6 +23,7 @@ def get_japanese_emoticon(file, emoticon)
     return sorry
   else
     return japanese_emoticon
+  end
 end
 
 def get_english_meaning(file, emoticon)
