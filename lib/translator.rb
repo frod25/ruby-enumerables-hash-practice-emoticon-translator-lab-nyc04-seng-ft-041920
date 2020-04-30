@@ -1,4 +1,5 @@
 require 'yaml'
+require 'pry'
 
 library = "./lib/emoticons.yml"
 
@@ -7,7 +8,8 @@ def load_library(file_path)
   emoticons.each_pair do |key, values|
     emoticons[key] = {:english => values.first, :japanese => values.last}
   end
-  emoticons  
+  binding.pry
+  emoticons
 end
 
 def get_japanese_emoticon(file, emoticon)
@@ -31,3 +33,5 @@ def get_english_meaning(file, emoticon)
   end
   english_meaning
 end
+
+load_library(library)
