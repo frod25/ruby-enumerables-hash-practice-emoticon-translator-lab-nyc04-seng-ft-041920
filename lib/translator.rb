@@ -1,5 +1,5 @@
 require 'yaml'
-require 'pry'
+#require 'pry'
 
 library = "./lib/emoticons.yml"
 test_jap_moji = "☜(⌒▽⌒)☞"
@@ -41,4 +41,4 @@ end
 
 #load_library(library)
 #get_japanese_emoticon(library, test_eng_moji)
-get_english_meaning(library, test_jap_moji)
+#get_english_meaning(library, test_jap_moji)
