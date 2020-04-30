@@ -26,7 +26,7 @@ def get_english_meaning(file, emoticon)
       english_meaning = key
     end
   end
-  japanese_emoticon
+  english_meaning
 end
 
 load_library(library)
