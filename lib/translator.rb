@@ -35,4 +35,5 @@ def get_english_meaning(file, emoticon)
   english_meaning
 end
 
-load_library(library)
+#load_library(library)
+get_japanese_emoticon(library, test_eng_moji)
