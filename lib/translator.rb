@@ -31,7 +31,6 @@ def get_english_meaning(file, emoticon)
   english_meaning = nil
   master_list.each_pair do |key, values|
     values.each_pair do |k, v|
-      binding.pry
       if values[:japanese] == emoticon
         english_meaning = key
       end
