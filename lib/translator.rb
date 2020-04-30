@@ -1,4 +1,3 @@
-require 'pry'
 require 'yaml'
 
 library = "./lib/emoticons.yml"
@@ -28,5 +27,3 @@ def get_english_meaning(file, emoticon)
   end
   english_meaning
 end
-
-load_library(library)
