@@ -29,6 +29,7 @@ end
 def get_english_meaning(file, emoticon)
   master_list = load_library(file)
   english_meaning = nil
+  not_found = "Sorry, that emoticon was not found"
   master_list.each_pair do |key, values|
     values.each_pair do |k, v|
       if values[:japanese] == emoticon
@@ -36,7 +37,11 @@ def get_english_meaning(file, emoticon)
       end
     end
   end
-  english_meaning
+  if english_meaning == nil
+    puts not_found
+  else
+    english_meaning
+  end
 end
 
 #load_library(library)
